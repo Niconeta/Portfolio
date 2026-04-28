@@ -1,11 +1,13 @@
 .main-content {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 .section {
   margin-bottom: 4rem;
+  padding-inline: 0.5rem;
 }
 
 .section-title {
@@ -91,5 +93,32 @@
 
   .hero-description {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 1rem 0.75rem;
+  }
+
+  .hero-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-content {
+    gap: 1rem;
+  }
+
+  .hero-profile-pic {
+    width: 130px;
+    height: 130px;
+  }
+
+  .hero-name {
+    font-size: 1.75rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
   }
 }

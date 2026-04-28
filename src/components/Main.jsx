@@ -15,8 +15,7 @@ function Main({ nombre, apellido, dataEstudios, dataCertificados, dataIdiomas })
           <img src="/perfil.jpg" alt="Nicolás Moya" className="hero-profile-pic" />
           <h1 className="hero-name">{nombre} {apellido}</h1>
           <p className="hero-description">
-            Soy Técnico Superior en Comunicación Social y curso la carrera de Programación en la Universidad Tecnológica Nacional-Facultad Regional Tucumán.
-            Me considero una persona proactiva, con ganas de aprender y crecer profesionalmente en el ámbito del desarrollo de web.
+            Graduado de la UTN-FRT y en Comunicación Social. Mi enfoque combina la precisión técnica del desarrollo de software con la claridad estratégica de la comunicación. Me especializo en crear soluciones web robustas, priorizando siempre la responsabilidad, la mejora continua y la experiencia del usuario. Comprometido con transformar ideas complejas en productos digitales eficientes.
           </p>
         </div>
       </section>

@@ -20,17 +20,17 @@ const dataEstudios = [
   },
   { 
     id: 3, 
-    titulo: "Técnico en Comunicación Social", 
+    titulo: "Técnicatura Superior en Comunicación Social", 
     institucion: "Instituto San Miguel", 
     anio: "2016 - 2019",
-    descripcion: ""
+    descripcion: "Estudios Finalizados. Título obtenido en 2019."
   },
   { 
     id: 4, 
     titulo: "Tecnicatura Universitaria en Programación", 
     institucion: "Universidad Tecnológica Nacional - Facultad Regional Tucumán", 
-    anio: "2024 - Actual",
-    descripcion: ""
+    anio: "2024 - 2026",
+    descripcion: "Estudios Finalizados. Título en trámite."
   },
 ];
 
@@ -47,12 +47,6 @@ const dataCertificados = [
 
 // Idiomas que hablo
 const dataIdiomas = [
-  {
-    id: 1,
-    nombre: "Español",
-    nivel: 100,
-    nivelTexto: "Nativo"
-  },
   {
     id: 2,
     nombre: "Inglés",

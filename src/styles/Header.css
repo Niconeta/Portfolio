@@ -17,6 +17,7 @@
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .logo h2 {
@@ -30,6 +31,67 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-nav.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.menu-icon {
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background: white;
+  border-radius: 1px;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: white;
+  border-radius: 1px;
+  transition: transform 0.3s ease;
+}
+
+.menu-icon::before {
+  top: -8px;
+}
+
+.menu-icon::after {
+  top: 8px;
+}
+
+.menu-toggle.open .menu-icon {
+  background: transparent;
+}
+
+.menu-toggle.open .menu-icon::before {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open .menu-icon::after {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 .contact-header-btn {
@@ -74,18 +136,84 @@
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 0.8rem 1rem;
+  }
+
   .header-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0 1rem;
+  }
+
+  .logo h2 {
+    font-size: 1.25rem;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
   }
 
   .header-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #1a1a2e;
     flex-direction: column;
-    gap: 1rem;
+    align-items: stretch;
+    gap: 0.75rem;
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+    border-top: 1px solid rgba(124, 58, 237, 0.18);
+    z-index: 99;
+  }
+
+  .header-nav.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   .social-links {
     justify-content: center;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .contact-header-btn,
+  .social-btn {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .header {
+    padding: 0.7rem 0.8rem;
+  }
+
+  .logo h2 {
+    font-size: 1.1rem;
+  }
+
+  .header-container {
+    gap: 0.65rem;
+  }
+
+  .header-nav {
+    gap: 0.65rem;
+  }
+
+  .contact-header-btn,
+  .social-btn {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.8rem;
   }
 }
